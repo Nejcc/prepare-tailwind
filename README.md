@@ -31,3 +31,23 @@ php artisan ui tailwind-vue
 ```
 php artisan ui tailwind-vue-auth
 ```
+
+#### 4. Compile
+
+```
+npm install
+```
+and / or
+```
+npm run watch
+```
+
+#### 5. serve
+
+```
+php artisan serve
+```
+or
+```
+php artisan serve --port 8888
+```

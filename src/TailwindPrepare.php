@@ -42,11 +42,11 @@ class TailwindPrepare extends LaravelUI
     protected function scaffoldAuth()
     {
         //Auth
-        $this->pushView('views/auth/login.blade.php', 'auth/login.blade.php');
-        $this->pushView('views/auth/register.blade.php', 'auth/register.blade.php');
-        $this->pushView('views/auth/verify.blade.php', 'auth/verify.blade.php');
-        $this->pushView('views/auth/email.blade.php', 'auth/email.blade.php');
-        $this->pushView('views/auth/reset.blade.php', 'auth/reset.blade.php');
+        $this->pushView('auth/login.blade.php', 'auth/login.blade.php');
+        $this->pushView('auth/register.blade.php', 'auth/register.blade.php');
+        $this->pushView('auth/verify.blade.php', 'auth/verify.blade.php');
+        $this->pushView('auth/email.blade.php', 'auth/email.blade.php');
+        $this->pushView('auth/reset.blade.php', 'auth/reset.blade.php');
 
         //Layouts
         $this->pushView('layouts/auth.blade.php', 'layouts/auth.blade.php');
@@ -116,12 +116,12 @@ class TailwindPrepare extends LaravelUI
 
     private function pushResource($tempPath, $newPath)
     {
-        return copy(__DIR__ . '/Temp/' . $tempPath, resource_path('/' . $newPath));
+        return copy(__DIR__ . '/Temp/resources/' . $tempPath, resource_path('/' . $newPath));
     }
 
     private function pushView($tempPath, $newPath)
     {
-        return copy(__DIR__ . '/Temp/' . $tempPath, resource_path('/views/' . $newPath));
+        return copy(__DIR__ . '/Temp/views/' . $tempPath, resource_path('/views/' . $newPath));
     }
 
     private function push($tempPath, $newPath)
